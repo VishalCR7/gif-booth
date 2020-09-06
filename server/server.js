@@ -43,6 +43,7 @@ const storage = multer.diskStorage({
     if (req.path === '/uploadBlob') {
       filename = `${id}.webm`
     }
+    console.log('Multer processing filename', { file, filename })
     cb(null, filename)
   },
 })
