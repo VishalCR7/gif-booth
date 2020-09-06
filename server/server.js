@@ -48,7 +48,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 const GREETING_PREFIX = 'public/gifs/greeting-'
-const PHOTO_PREFIX = 'public/photos/greeting-'
+const PHOTO_PREFIX = 'public/photos/photo-'
 
 const listByPrefix = async (Prefix) => {
   const params = {
