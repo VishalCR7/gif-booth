@@ -43,7 +43,7 @@ const storage = multer.diskStorage({
     if (req.path === '/uploadBlob') {
       filename = `${id}.webm`
     }
-    console.log('Multer processing filename', { file, filename })
+    console.log(`Multer processing filename for ${filename}`)
     cb(null, filename)
   },
 })
@@ -249,7 +249,6 @@ app.post('/video2gif', upload.none(), ({ body }, res) => {
 })
 
 app.post('/uploadBlob', upload.single('video'), ({ file }, res) => {
-  console.log('Uploading', file)
   res.send(file)
 })
 
